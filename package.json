@@ -1,0 +1,21 @@
+{
+  "name": "doc.echoyl.com",
+  "version": "1.0.0",
+  "description": "doc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.21",
+    "@vuepress/theme-default": "^2.0.0-rc.96",
+    "sass-embedded": "^1.86.3",
+    "typescript": "^5.8.3",
+    "vuepress": "^2.0.0-rc.21",
+    "vuepress-theme-plume": "^1.0.0-rc.141"
+  }
+}
