@@ -25,16 +25,22 @@ export const guide = defineNoteConfig({
         'searchSelect',
         'uploader',
         'map',
-        'customerColumn',
-        'confirmForm',
+        {
+          text: '自定义组件',
+          prefix: 'customer',
+          items:[
+            'actions','confirm','tableinform','confirmform','modaltable','dropdown','other'
+          ]
+        },
+        //'confirmForm',
         'dependencyOn',
-        'dselect',
+        //'dselect',
         'relationMany',
-        'dropdownAction',
+        //'dropdownAction',
         'export',
         'calendar',
         'modalSelect',
-        'customerTable'
+        //'customerTable'
       ],
     },
     {
