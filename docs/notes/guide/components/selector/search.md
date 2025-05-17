@@ -1,11 +1,11 @@
 ---
-title: 搜索选择器
+title: 下拉搜索
 createTime: 2025/04/29 15:41:54
-permalink: /guide/searchSelect/
+permalink: /guide/selector/search/
 ---
 ## 在线预览
 ::: info 地址
-[点击查看](https://echoyl.com/antadmin/components/searchSelect)
+[点击查看](https://echoyl.com/antadmin/components/selector/search)
 :::
 
 

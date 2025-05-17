@@ -23,3 +23,7 @@ permalink: /guide/customer/confirm/
 
 请求的url后端逻辑需要自行完成
 :::
+
+## 更多
+
+配合数据接口返回`data.ifram_url` 请求后会默认打开这个 `ifram_url` 的iframe页面

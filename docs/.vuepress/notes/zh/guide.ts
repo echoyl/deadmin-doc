@@ -22,24 +22,32 @@ export const guide = defineNoteConfig({
       prefix: 'components',
       collapsed: false,
       items: [
-        'searchSelect',
-        'uploader',
-        'map',
+        {
+          text: '选择器',
+          prefix: 'selector',
+          collapsed:true,
+          items:[
+            'search','modal','pca'
+          ]
+        },
         {
           text: '自定义组件',
           prefix: 'customer',
+          collapsed:true,
           items:[
             'actions','confirm','tableinform','confirmform','modaltable','dropdown','other'
           ]
         },
-        //'confirmForm',
+        'editor',
+        'uploader',
+        'map',
+        'other',
+        'calendar',
         'dependencyOn',
         //'dselect',
         'relationMany',
         //'dropdownAction',
         'export',
-        'calendar',
-        'modalSelect',
         //'customerTable'
       ],
     },

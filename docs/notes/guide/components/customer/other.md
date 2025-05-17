@@ -148,3 +148,12 @@ permalink: /guide/customer/other/
 ## 时间距离
 
 通过时间明文计算出距离现在的时间距离，如：1天前、1小时前、刚刚等
+
+## 打开iframe
+
+通过设定`src` 点击dom后会打开iframe窗口，并展示src的内容
+支持 width height 等属性配置
+
+## 打印表单的值
+
+调试的话可以使用，点击后console.log和jsonEditor都会记录当前form的值
