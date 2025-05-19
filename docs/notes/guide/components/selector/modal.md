@@ -95,9 +95,11 @@ modal弹出层选择器，支持单选，多选，自定义显示字段，自定
 ### 多选
 
 ::: info 说明
-多选的话后端返回反选数据暂时没有添加，所以请在数据接口的地方自行读取数据返回
+配置字段为 modalSelects后，在详情页面会通过关联的名称把数据读取出返回前端。关联的类型请选择cascaders
 
-多选时数据放到了[{data:record}]data中。data名称可以配置{dataName:"data"}
+还需要手动配置 `fieldNames`,如果显示的字段名称和默认不一致的话
+
+多选时数据放到了[{data:record}]data中。data名称可以配置{dataName:"data"}，如果是通过模型字段自动配置的，就默认为data不能再修改了
 :::
 
 ```json
