@@ -12,4 +12,8 @@ export default defineNavbarConfig([
     link: '/changelog.md',
     activeMatch: '^/changelog/',
   },
+  {
+    text: 'Laravel文档',
+    link: 'https://www.echoyl.com/docs/12.x'
+  },
 ])

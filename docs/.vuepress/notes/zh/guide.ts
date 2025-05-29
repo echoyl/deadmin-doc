@@ -41,6 +41,7 @@ export const guide = defineNoteConfig({
         'editor',
         'uploader',
         'map',
+        'dragSort',
         'other',
         'calendar',
         'dependencyOn',
