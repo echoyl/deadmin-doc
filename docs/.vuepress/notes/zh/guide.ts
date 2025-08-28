@@ -53,6 +53,15 @@ export const guide = defineNoteConfig({
       ],
     },
     {
+      text: '页面',
+      //icon: 'fluent-mdl2:edit-create',
+      prefix: 'page',
+      collapsed: false,
+      items: [
+        'panel'
+      ],
+    },
+    {
       text: '模型',
       //icon: 'fluent-mdl2:edit-create',
       prefix: 'model',
