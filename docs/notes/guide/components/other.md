@@ -32,3 +32,52 @@ Icon选择器，选择图标。多用于菜单的图标选择
 ## 显示html
 
 后端数据返回html后在页面中展示。自定义强一点，可以自定义展示样式
+
+## FormList
+
+分两种使用情况 
+- 1.直接使用，整体配置columns
+- 2.引用已有的菜单，在菜单中直接配置好列字段，然后选中该菜单（更多参看1对多编辑）
+
+::: info
+开启箭头排序后如果宽度变形需要如下配置,96px是4个icon的宽度，刚好可以占一行，也可以自行调节这个宽度值
+:::
+`fieldProps`
+```json
+{
+  "arrowSort": true,
+  "containerStyle": {
+    "width": "calc(100% - 96px)"
+  }
+}
+```
+整体配置中配置columns
+
+```json
+{
+  "columns": [
+    {
+      "valueType": "group",
+      "columns": [
+        {
+          "title": "名称",
+          "dataIndex": "name",
+          "colProps": {
+            "span": 12
+          }
+        },
+        {
+          "title": "链接地址",
+          "dataIndex": "link",
+          "colProps": {
+            "span": 12
+          }
+        }
+      ]
+    }
+  ],
+  "rowProps": {
+    "gutter": 0
+  }
+}
+```
