@@ -5,11 +5,13 @@ permalink: /guide/dragSort/
 ---
 
 ## 在线预览
+
 ::: info 地址
 [点击查看](https://echoyl.com/antadmin/example/card/category)
 
 因为没有修改权限,所以修改失败后会自动回滚
 :::
+
 ## 介绍
 
 ::: info 说明
@@ -18,7 +20,7 @@ permalink: /guide/dragSort/
 
 使用场景应该是分类列表中或者数据量不大的时候
 
-后端数据的逻辑是每新增一条数据先读取最大的排序值 + 1赋值给新数据,拖拽排序操作为,active和over数据,将over的排序值赋值给active,然后将两者之间的数据排序值根据是否大于active的排序值 +1 或者 -1
+后端数据的逻辑是每新增一条数据先读取最大的排序值 + 1 赋值给新数据,拖拽排序操作为,active 和 over 数据,将 over 的排序值赋值给 active,然后将两者之间的数据排序值根据是否大于 active 的排序值 +1 或者 -1
 
 :::
 
@@ -26,4 +28,27 @@ permalink: /guide/dragSort/
 
 - 模型中必须包含 `displayorder`字段,通过后台创建的模型默认包含该字段
 - 在对应的模型设置中勾选 `开启拖拽排序`
-- 在Table中增加拖拽列,选择类型为 `排序 - dragsort`
+- 在 Table 中增加拖拽列,选择类型为 `排序 - dragsort`
+
+## php 控制器文件修改
+
+新增排序属性
+
+```php
+$this->displayorder = [
+    ['displayorder', 'asc'],
+    ['id', 'desc']
+];
+```
+
+新增或修改 beforePost 方法
+
+```php
+public function beforePost(&$data, $id = 0, $item = [])
+{
+    if (!$id) {
+        $data['displayorder'] = $this->getMaxDisplayorder();
+    }
+    return;
+}
+```
