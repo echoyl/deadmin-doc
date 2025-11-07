@@ -58,7 +58,9 @@ export const guide = defineNoteConfig({
       prefix: 'page',
       collapsed: false,
       items: [
-        'panel'
+        'panel',
+        'table',
+        'form'
       ],
     },
     {
