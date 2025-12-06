@@ -13,6 +13,7 @@ export const guide = defineNoteConfig({
         'index',
         'intro',
         'setting',
+        'code',
         'crud',
       ],
     },

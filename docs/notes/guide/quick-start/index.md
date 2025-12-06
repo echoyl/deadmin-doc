@@ -3,6 +3,7 @@ title: 快速开始
 createTime: 2025/04/17 10:16:16
 permalink: /guide/quickstart/
 ---
+
 ## 安装
 
 使用 `git` 克隆代码后使用 `composer` 安装依赖
@@ -13,7 +14,7 @@ $ git clone https://github.com/echoyl/deadmin.git
 #或码云
 $ git clone https://gitee.com/deadmin/deadmin.git
 
-#复制配置文件 
+#复制配置文件
 
 $ cp .env.backup .env
 #修改配置文件中
@@ -27,6 +28,8 @@ $ composer config repo.packagist composer https://mirrors.cloud.tencent.com/comp
 #安装拓展包
 $ composer update
 
+#线上安装拓展包
+$ composer update --no-dev
 
 #迁移前端静态文件 及 配置文件
 $ php artisan deadmin:publish
@@ -43,6 +46,7 @@ $ php artisan storage:link
 ```
 
 ## 更新
+
 ```bash
 #更新拓展包
 $ composer update echoyl/sa
@@ -50,8 +54,9 @@ $ composer update echoyl/sa
 $ php artisan deadmin:publish --update
 
 ```
-因为composer镜像同步速度比较慢 可以手动拉取 [包源码github地址](https://github.com/echoyl/sa) 后覆盖echoyl/sa文件夹后执行上面的 
-php artisan deadmin:publish --update 命令覆盖dist文件
+
+因为 composer 镜像同步速度比较慢 可以手动拉取 [包源码 github 地址](https://github.com/echoyl/sa) 后覆盖 echoyl/sa 文件夹后执行上面的
+php artisan deadmin:publish --update 命令覆盖 dist 文件
 
 ## 服务器配置
 
@@ -83,8 +88,7 @@ location /antadmin/ {
 
 拉取 [deadmindev](https://github.com/echoyl/deadmindev.git) 这个前端仓库后
 
-
 ```bash
-tyarn 
+tyarn
 npm run start
 ```
