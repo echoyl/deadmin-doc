@@ -1,24 +1,20 @@
 ---
 pageLayout: home
 config:
- -
-    type: hero
+  - type: hero
     full: true
     background: linear-gradient(to left bottom, hsl(197, 100%, 85%) 0%,hsl(184, 100%, 85%) 100%)
     hero:
       name: DeAdmin
       text: 一个后台管理系统
       actions:
-        -
-          theme: brand
+        - theme: brand
           text: 快速开始
           link: /guide/quickstart/
-        -
-          theme: alt
+        - theme: alt
           text: 在线体验 →
           link: https://echoyl.com/antadmin
- -
-    type: custom
+  - type: custom
 ---
 
 <div style="max-width: 960px;margin:0 auto;" class="home-custom-content">

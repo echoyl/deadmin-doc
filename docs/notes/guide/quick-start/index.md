@@ -6,7 +6,46 @@ permalink: /guide/quickstart/
 
 ## 安装
 
-使用 `git` 克隆代码后使用 `composer` 安装依赖
+::: info 2 种方式安装
+
+- 1.安装 [laravel](https://laravel.com/docs/12.x) 项目后 composer require echoyl/sa
+- 2.克隆 [deadmin](https://github.com/echoyl/deadmin.git) 项目后 composer update 安装
+
+:::
+::: code-tabs
+@tab bash
+
+```bash
+$ laravel new example-app
+
+$ cd example-app
+
+#修改配置文件中 ./.env
+
+#APP_NAME=你的项目名称如：echoyl 必须英文，生成表名使用该名称作为前缀
+#DB_DATABASE=你的数据库名称如：echoyl 并创建该数据库配置数据库账号及密码
+#修改文件系统类型
+#FILESYSTEM_DISK=public
+
+#修改数据库配置文件 表前缀 ./config/database.php
+# 'connections.mysql.prefix'=>'la_'
+
+$ composer require echoyl/sa
+
+#迁移前端静态文件 及 配置文件
+$ php artisan deadmin:publish --force
+
+#如果使用的laravel版本 >= 11，还需要额外运行下列命令
+$ php artisan vendor:publish --tag=sanctum-migrations
+
+#生成基础的数据文件
+$ php artisan migrate
+
+#生成文件文件夹超链
+$ php artisan storage:link
+```
+
+@tab php
 
 ```bash
 #github
@@ -14,6 +53,7 @@ $ git clone https://github.com/echoyl/deadmin.git
 #或码云
 $ git clone https://gitee.com/deadmin/deadmin.git
 
+$ cd deadmin
 #复制配置文件
 
 $ cp .env.backup .env
@@ -44,6 +84,8 @@ $ php artisan migrate
 $ php artisan storage:link
 
 ```
+
+:::
 
 ## 更新
 
