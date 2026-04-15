@@ -18,7 +18,7 @@ permalink: /guide/code/
 
 这是一个文章模块通过创建模型生成的文件
 
-### 目录机构
+### 目录结构
 
 ::: file-tree icon="simple"
 `echoyl`为项目名称

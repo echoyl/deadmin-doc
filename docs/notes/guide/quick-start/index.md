@@ -6,10 +6,11 @@ permalink: /guide/quickstart/
 
 ## 安装
 
-::: info 2 种方式安装
+::: info 3 种方式安装
 
 - 1.安装 [laravel](https://laravel.com/docs/12.x) 项目后 composer require echoyl/sa
 - 2.克隆 [deadmin](https://github.com/echoyl/deadmin.git) 项目后 composer update 安装
+- 3.docke安装
 
 :::
 ::: code-tabs
@@ -45,7 +46,20 @@ $ php artisan migrate
 $ php artisan storage:link
 ```
 
-@tab php
+@tab docker
+
+```bash
+$ git clone https://github.com/echoyl/deadmin-docker.git .
+# build 拉去镜像
+$ docker compose up -d
+# run create deadmin 创建项目
+$ docker compose run --rm app
+
+### 访问 http://localhost:8080/antadmin 或者反向代理到本地8080端口
+
+```
+
+@tab github
 
 ```bash
 #github
